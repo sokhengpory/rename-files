@@ -1,7 +1,14 @@
 const fs = require('fs');
 const path = require('path');
 
-const wallpaperFolder = path.join(__dirname, 'Wallpapers');
+// Put your wallpaper's folder in this folder
+// Change the "Wallpapers" to your wallpaper's folder name
+const wallpaperFolder = path.join(
+  __dirname,
+  '../../../',
+  'Pictures',
+  'Wallpapers'
+);
 
 fs.readdirSync(wallpaperFolder).forEach((file, i) => {
   const extensions = file.split('.')[1];
