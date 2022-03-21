@@ -3,13 +3,13 @@ const path = require('path');
 
 // Put your wallpaper's folder in this folder
 // Change the "Wallpapers" to your wallpaper's folder name
-const wallpaperFolder = path.join(__dirname, 'Wallpapers');
+const renameFolder = path.join(__dirname, 'rename-folder');
 
-fs.readdirSync(wallpaperFolder).forEach((file, i) => {
+fs.readdirSync(renameFolder).forEach((file, i) => {
   const extensions = file.split('.')[1];
   fs.rename(
-    path.join(wallpaperFolder, file),
-    path.join(wallpaperFolder, `${i}.${extensions}`),
+    path.join(renameFolder, file),
+    path.join(renameFolder, `${i}.${extensions}`),
     (err) => {
       if (err) console.log(err);
     }
